@@ -9,4 +9,4 @@
 * What is a commit? What makes a good commit message? 
 * A commit is when you create a save point of the newest modifications to a coding project in git. When you commit, you are documenting the changes made to the repository so with every update, people are able to see exactly which changes were made. A good commit message will state the specific changes made to the project. Of course, it is also important to use the same language that is used by other coders. Ex: "Add github definition." is preferred over "Added github definition."
 * What is a merge conflict?
-* A merge conflict is when you change the same part of a file differently in the branches being merged together.
+* A merge conflict is when you change the same part of a file differently in the branches being merged together. Since github doesn't know which file is preferred, someone needs to resolve the conflict before the branches can be fully merged together.
