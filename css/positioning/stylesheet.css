@@ -1,16 +1,18 @@
 body {
-display: block;
+
 }
 .ha {
-	display: block;
-	position: static;
-	margin-left: auto;
-	margin-right: auto;
 
+	position: absolute;
+	left: 37%;
+	right: 63%;
+	top: 130px;
 	z-index: 1;
-}.oc {
+}
+
+.oc {
 	display: block;
-	position: static;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 200px;
@@ -18,8 +20,9 @@ display: block;
 }
 
 .gl {
-	position: relative;
-	margin-left: 120px;
-	margin-top: 2px;
+	position: absolute;
+	left: 43.5%;
+	right: 56.5%;
+	top: 297px;
 	z-index: 1;
 }
