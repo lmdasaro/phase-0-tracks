@@ -1,13 +1,13 @@
 
 
 main {
-  width: 756px;
+  width: 80%;
   display: inline-block;
   vertical-align: text-top;
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
   display: inline-block;
   vertical-align: text-top;
 }
@@ -26,13 +26,14 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
+
   line-height: 25px;
 
 }
 #external-links {
     display: inline-block;
     vertical-align: text-top;
+    width: 15%;
 }
 
 /* you're welcome to edit the
