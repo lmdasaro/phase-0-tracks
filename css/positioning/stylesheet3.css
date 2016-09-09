@@ -1,0 +1,23 @@
+body {
+display: block;
+}
+.ha {
+	display: block;
+	position: absolute;
+	margin-left: 50%;
+
+	z-index: 1;
+}.oc {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	z-index: -1;
+}
+
+.gl {
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 200px;
+	z-index: 1;
+}

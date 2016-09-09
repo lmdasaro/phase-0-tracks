@@ -1,10 +1,19 @@
 body {
+<<<<<<< HEAD
+	display: block;
+text-align: center;
+=======
 
+>>>>>>> 0cc2786f3ebe19133439a9fd1fae0eb4c7d174b7
 }
 .oc {
 
 	position: absolute;
 	margin: auto;
+<<<<<<< HEAD
+	margin-top: 200px;
+=======
+>>>>>>> 0cc2786f3ebe19133439a9fd1fae0eb4c7d174b7
 	z-index: -1;
 }.ha {
 
