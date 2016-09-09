@@ -1,14 +1,10 @@
 body {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+
 }
 .oc {
 
 	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
+	margin: auto;
 	z-index: -1;
 }.ha {
 
@@ -23,6 +19,6 @@ body {
 .gl {
 	position: absolute;
 	margin-left: 120px;
-	margin-top: 2px;
+	margin-top: 200px;
 	z-index: 1;
 }
