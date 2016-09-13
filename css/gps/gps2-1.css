@@ -1,3 +1,32 @@
-body {
-	background-color: blue;
+header{
+  border:solid 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+  background-color: #2e8b57;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.column-1{
+  display: table-cell;
+  vertical-align: text-top;
+  border: solid 5px;
+  width: 45%;
+  padding: 10px;
+  background-color: #66CD00;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.column-2{
+  display: table-cell;
+  vertical-align: text-top;
+  border: solid 5px;
+  width: 45%;
+  padding: 10px;  
+  background-color: #009900;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+footer{
+  border: solid 10px;
+  padding: 20px;
+  margin-top: 5px;
+  background-color: #00FF00;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
