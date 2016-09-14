@@ -1,0 +1,28 @@
+Algorithm for using an elevator:
+-Wait for elevator to arrive and doors to open.
+-Wait for owner to enter elevator.
+-Enter elevator after master.
+-After everyone using elevator has safely entered, press "close doors" button.
+-Ask riders which floor they desire to go to.
+-If valid floor numbers are called, press those numbers.
+-Otherwise, only press owner's desired floor.
+-When arriving to each desired floor, step aside and let riders out of the elevator.
+-Once at owner's desired floor, allow owner to exit first, then follow owner out of the elevator.
+
+Real-Life Algorithm:
+Taking Tiny for a walk.
+-Locate Tiny.
+-Obtain leash from it's spot near the front door.
+-Call Tiny over and ask him to perform "Sit" command.
+-Wait for Tiny to sit.
+-If waiting longer than 7 seconds, repeat "Sit" command.
+-Once he is sitting, hook leash onto collar.
+-Leave house and walk with Tiny around the block.
+-Stay within 10 paces of Tiny at all times.
+-If he stops to expel excrement, grab small plastic waste bag from leash add-on and pick up excrement with small plastic waste bag.
+-Tie small plastic waste bag in a knot to keep excrement inside.
+-Continue walk with Tiny until outside of house.
+-Throw small plastic waste bag with excrement in the outside trash.
+-Once at home, go back inside.
+-Unleash Tiny.
+-Give Tiny a dog treat.
