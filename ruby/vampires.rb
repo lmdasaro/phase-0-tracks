@@ -4,6 +4,11 @@ garlic_bread = true
 sign_up = true
 result = "Result inconclusive."
 
+puts "How many employees will be processed?"
+employees = gets.chomp
+x = 1
+until x > employees.to_i
+
 puts "What is your name?"
 name = gets.chomp
 name = name.downcase
@@ -46,3 +51,5 @@ end
 
 
 puts "#{result}"
+x += 1
+end
