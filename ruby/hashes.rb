@@ -40,8 +40,10 @@
 	#ask if update is needed
 	puts "Are there any changes to make to these details? Type the category if there are changes to report. Type 'none' if there are no changes to report."
 	change = gets.chomp.downcase
+	#if no change, save current details
 	if change == "none"
 		puts "Client details for #{client_details[:name]} have been saved."
+	#if change, convert value to symbol and update key value pair. print updated details.
 	else
 		change = change.to_sym
 		puts "Please enter changed information for category:#{change}."
