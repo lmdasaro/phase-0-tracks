@@ -1,4 +1,4 @@
-=begin
+##arrays first
 array = ["Rose", "Dahlia", "Lily", "Iris", "Orchid", "Hibiscus", "Daisy", "Hydrangea", "Lotus", "Lavender", "Ice plant"]
 array.each do |flower|
 	puts "#{flower} is a very beautiful flower."
@@ -35,8 +35,8 @@ array_5.drop_while{|flower| flower.length < 5 }
 	puts array_5
 puts
 puts
-=end
 
+##hashes next
 hash = {
 :veggie1 => "broccoli",
 :veggie2 => "onion",
@@ -85,13 +85,10 @@ hash_4 = {
 :veggie4 => "cauliflower",
 :veggie5 => "garlic"
 }
-hash_4.select!{|key, value| value.include?("a") }
+hash_4.select!{|key, value| value.include?("a")}
 	puts hash_4
 puts
 puts
-
-=begin
-## now we need to do the last question(question 4 for the hash.) any ideas which block you wanted to use?
 
 hash_5 = {
 :veggie1 => "broccoli",
@@ -100,6 +97,5 @@ hash_5 = {
 :veggie4 => "cauliflower",
 :veggie5 => "garlic"
 }
-hash_5.
+hash_5.reject!{|key, value| value.include?("e")}
 	puts hash_5
-=end
