@@ -92,7 +92,7 @@ beautify(new_list)
 
 =begin
     
-COMMENT SECTION
+RELEASE 4 :: COMMENT SECTION
 ##################
 
 -I learned that when you pseudocode all the steps and already know what your input and output should be, it makes writing code a little easier.
