@@ -76,6 +76,7 @@ count = 1
 
 
 arr = []
+
 #alternate loop style:
 # loop do 
 # break if count == 50
