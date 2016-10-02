@@ -2,6 +2,8 @@ class Santa
 
 	def  initialize (gender, ethnicity)
 		puts "Initializing Santa instance ..."
+		@gender = gender
+		@ethnicity = ethnicity
 		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		age = 0
 	end
@@ -23,17 +25,20 @@ class Santa
 		reindeer_ranking.insert(-1, reindeer_ranking.delete_at(reindeer))
 	end
 
+	def gender
+		@gender
+	end
+
 	def gender=(new_gender)
 		@gender = new_gender
 	end
 
 	def age
-		@age = age
-
+		@age
 	end
 
 	def ethnicity
-		@ethnicity = ethnicity
+		@ethnicity
 	end
 
 end
@@ -50,3 +55,7 @@ example_genders.length.times do |i|
   	santas << Santa.new(example_genders[i], example_ethnicities[i])
   end
 p santas
+
+example_genders.length.times do |i|
+	puts "This santa's gender is #{santas[i].gender} and ethnicity is #{santas[i].ethnicity}."
+end
