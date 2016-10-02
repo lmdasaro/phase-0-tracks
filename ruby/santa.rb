@@ -1,11 +1,14 @@
 class Santa
 
+attr_reader :age, :ethnicity
+attr_accessor :gender, :reindeer_ranking
+
 	def  initialize (gender, ethnicity)
 		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		age = 0
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 
 	def speak
@@ -17,12 +20,12 @@ class Santa
 	end
 
 	def celebrate_birthday
-		age += 1
+		@age += 1
 	end
 
-	def get_mad_at(reindeer)
-		reindeer_ranking.index(reindeer)
-		reindeer_ranking.insert(-1, reindeer_ranking.delete_at(reindeer))
+	def get_mad_at(name)
+		@reindeer_ranking.delete(name)
+		@reindeer_ranking.insert(-1,name)
 	end
 
 	def gender
@@ -55,7 +58,26 @@ example_genders.length.times do |i|
   	santas << Santa.new(example_genders[i], example_ethnicities[i])
   end
 p santas
+=begin
+# example_genders.length.times do |i|
+# 	puts "This santa's gender is #{santas[i].gender} and ethnicity is #{santas[i].ethnicity}."
+# end
+=end
 
-example_genders.length.times do |i|
-	puts "This santa's gender is #{santas[i].gender} and ethnicity is #{santas[i].ethnicity}."
-end
+Claws = Santa.new("fixed", "feline")
+
+=begin
+
+Claws.gender = "castrati"
+puts "Claws identifies as a #{Claws.gender}."
+Claws.celebrate_birthday
+p Claws.age
+
+=end
+
+p Claws.reindeer_ranking
+Claws.get_mad_at("Rudolph")
+p Claws.reindeer_ranking
+
+
+
