@@ -2,8 +2,6 @@ class Santa
 
 	def  initialize (gender, ethnicity)
 		puts "Initializing Santa instance ..."
-		@gender = gender
-		@ethnicity = ethnicity
 		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		age = 0
 	end
@@ -21,13 +19,23 @@ class Santa
 	end
 
 	def get_mad_at(reindeer)
+		reindeer_ranking.index(reindeer)
+		reindeer_ranking.insert(-1, reindeer_ranking.delete_at(reindeer))
+	end
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	def age
+		@age = age
 
 	end
 
-	def gender
-		@gender = gender
+	def ethnicity
+		@ethnicity = ethnicity
 	end
-	
+
 end
 
 # Nick = Santa.new
