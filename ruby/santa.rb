@@ -67,17 +67,13 @@ p santas
 Claws = Santa.new("fixed", "feline")
 
 =begin
-
 Claws.gender = "castrati"
 puts "Claws identifies as a #{Claws.gender}."
 Claws.celebrate_birthday
 p Claws.age
-
-=end
-
 p Claws.reindeer_ranking
 Claws.get_mad_at("Rudolph")
 p Claws.reindeer_ranking
-
+=end
 
 
