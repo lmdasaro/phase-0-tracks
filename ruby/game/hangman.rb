@@ -1,5 +1,5 @@
 class Hangman
-	attr_reader :guess_count, :game_over, :answer, :guess_display
+	attr_reader :guess_count, :game_over, :answer, :guess_display, :guess_max
 
 	def initialize(answer)
 		@answer = answer.downcase.split("")
@@ -45,19 +45,19 @@ end
 
 #user interface
 puts "Let's play some hangman!"
-game = Hangman.new
-puts "Player 1, please enter a word."
+puts "Player 1: Please enter a word."
 answer = gets.chomp
-puts "Player 2, you have #{game.guess_max} guesses."
+game = Hangman.new(answer)
+puts "Player 2: You have #{@guess_max} guesses."
 
-while !game.game_over
-	puts "Player 2, please try and guess the word by entering a letter."
+while !game.correct_answer
+	puts "Player 2: Please try and guess the word by entering a letter."
 	guess = gets.chomp.downcase
-	if !game.check_word
+	if !game.check_word(guess)
 		puts "Nope. Please enter a different letter."
 	end
 end
-until game.correct_answer || @guess_max
+until game.correct_answer || guess_max
 	guess = gets.chomp.downcase 
 	game.guess_by_letter(letter)
 	p game.guess_display
@@ -67,3 +67,11 @@ if game.correct_answer?
 else 
 	puts "Aww. You aren't very good at this, are you? The answer was #{game.answer}."
 end
+
+###NOTES TO SELF
+# creating a hangman word guessing game:
+# ask player 1 for a word.
+# ask player 2 to guess a word. provide the amount of characters by leaving underscores.
+# as the player guesses, count down the amount of tries(the tries count if they are new letters). after finite amount of tries(guess amount related to word length), user 2 either wins or loses.
+# if player 2 wins, get message of: Congrats! The answer was ""!. You won after x tries.!
+# if player 2 loses, get message of: Aww. You aren't very good at this, are you? The answer was "".
