@@ -33,7 +33,7 @@ class Hangman
 	end
 	def check_word(letter)
 		@guess_count += 1
-		if @word == #{answer}
+		if @word == @answer
 			@game_over = true
 		else
 			false
@@ -52,8 +52,18 @@ puts "Player 2, you have #{game.guess_max} guesses."
 
 while !game.game_over
 	puts "Player 2, please try and guess the word by entering a letter."
-	guess = gets.chomp
+	guess = gets.chomp.downcase
 	if !game.check_word
 		puts "Nope. Please enter a different letter."
 	end
+end
+until game.correct_answer || @guess_max
+	guess = gets.chomp.downcase 
+	game.guess_by_letter(letter)
+	p game.guess_display
+end 
+if game.correct_answer?
+	puts "Congrats! The answer was #{game.answer}!. You won after #{game.guess_array.length} tries."
+else 
+	puts "Aww. You aren't very good at this, are you? The answer was #{game.answer}."
 end
