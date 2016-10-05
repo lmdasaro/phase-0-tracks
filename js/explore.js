@@ -16,3 +16,13 @@ function reverse(str) {
 console.log(reverse("hello"));
 
 console.log(reverse("Lisa D'Asaro"));
+
+var reveresedString = reverse("KittyLi");
+if (1 == 1) {
+	console.log(reveresedString);
+}
+
+//could say: 
+if (true) {
+	console.log(reveresedString);
+}
