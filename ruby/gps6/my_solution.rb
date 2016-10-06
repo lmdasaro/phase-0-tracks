@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+#The require_relative statement links the files together, it basically copies the input from another file and transfers it to the output file.
+#The difference between require_relative and require is the location of the files. If they're in the same directory, require_relative is used. If the other file is located in another directory, you would use require and list the file path.
 require_relative 'state_data'
 
 class VirusPredictor
