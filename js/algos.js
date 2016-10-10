@@ -13,4 +13,16 @@ function longestWord(arr){
 //test code
 console.log(longestWord(["apple", "banana", "cat", "dog", "elephant"]))
 console.log(longestWord(["short", "long", "extraneous"]))
+
 //A function needed that takes two objects and checks to see if the objects share at least one key-value pair. 
+
+function pairShare(obj1, obj2){
+	for(var key in obj1) {
+		if (obj1[key] == obj2[key]){
+			return true;
+		}
+	}	
+	return false;
+}
+//test code
+console.log(pairShare())
