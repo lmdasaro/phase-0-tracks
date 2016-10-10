@@ -29,3 +29,7 @@ function pairShare(obj1, obj2){
 //test code
 console.log(pairShare({name: "Steven", age: 54},{name: "Tamir", age: 54}))
 console.log(pairShare({name: "Lisa", sex: "f"}, {name: "Tia", sex: "f"}, {name: "Steven", sex: "m"}))
+
+
+
+//A function needed that
