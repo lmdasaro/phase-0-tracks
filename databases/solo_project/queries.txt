@@ -94,3 +94,57 @@ sqlite> SELECT * FROM manga;
 13|Trigun|14|false|1
 14|Ranma 1/2|38|false|3
 15|Yu Yu Hakusho|19|false|1
+
+
+RELEASE 3
+different joins(Try a few different joins in your database, and record the commands and the output):
+
+Inner Join:
+sqlite> SELECT manga.id, manga.name, leads.type FROM manga INNER JOIN leads ON manga.lead_id = leads.id;
+
+1|Hana Kimi|Female-dominated roles
+2|Wallflower|Evenly distributed roles
+4|Tenchi Muyo|Evenly distributed roles
+5|Slayers|Female-dominated roles
+6|Sword Art Online|Male-dominated roles
+8|Attack on Titan|Male-dominated roles
+9|Fullmetal Alchemist|Male-dominated roles
+10|Fruits Basket|Evenly distributed roles
+11|InuYasha|Female-dominated roles
+12|Rurouni Kenshin|Male-dominated roles
+13|Trigun|Male-dominated roles
+14|Ranma 1/2|Evenly distributed roles
+15|Yu Yu Hakusho|Male-dominated roles
+
+
+Left Join:
+sqlite> SELECT manga.name, leads.type, manga.volumes FROM manga LEFT JOIN leads ON manga.lead_id = leads.id;
+
+Hana Kimi|Female-dominated roles|23
+Wallflower|Evenly distributed roles|36
+Tenchi Muyo|Evenly distributed roles|12
+Slayers|Female-dominated roles|13
+Sword Art Online|Male-dominated roles|10
+Attack on Titan|Male-dominated roles|20
+Fullmetal Alchemist|Male-dominated roles|27
+Fruits Basket|Evenly distributed roles|23
+InuYasha|Female-dominated roles|56
+Rurouni Kenshin|Male-dominated roles|28
+Trigun|Male-dominated roles|14
+Ranma 1/2|Evenly distributed roles|38
+Yu Yu Hakusho|Male-dominated roles|19
+
+
+Right Join:
+sqlite> SELECT manga.name, leads.type, manga.volumes FROM manga RIGHT JOIN leads ON manga.lead_id = leads.id;
+
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
+Full Join:
+sqlite> SELECT manga.name, leads.type, manga.volumes FROM manga FULL OUTER JOIN leads ON manga.lead_id = leads.id;
+
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
+
