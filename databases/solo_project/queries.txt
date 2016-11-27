@@ -1,0 +1,96 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM leads;
+
+1|Male-dominated roles
+2|Female-dominated roles
+3|Evenly distributed roles
+
+sqlite> SELECT * FROM manga;
+
+1|Hana Kimi|23|true|2
+2|Wallflower|36|true|3
+3|Ouran High Host Club|18|false|3
+4|Tenchi Muyo|12|false|3
+5|Slayers|13|false|2
+6|Sword Art Online|10|false|1
+7|Fushigi Yuugi|18|false|2
+8|Attack on Titan|20|false|1
+9|Fullmetal Alchemist|27|false|1
+10|Fruits Basket|23|true|3
+11|InuYasha|56|false|2
+12|Rurouni Kenshin|28|false|1
+13|Trigun|14|false|1
+14|Ranma 1/2|38|false|3
+15|Yu Yu Hakusho|19|false|1
+
+2. Update an item that mets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE manga SET collected="true" WHERE name="Ouran High Host Club";
+
+sqlite> SELECT name FROM manga WHERE collected="true";
+Hana Kimi
+Wallflower
+Ouran High Host Club
+Fruits Basket
+
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM manga, leads WHERE manga.lead_id = leads.id;
+
+1|Hana Kimi|23|true|2|2|Female-dominated roles
+2|Wallflower|36|true|3|3|Evenly distributed roles
+3|Ouran High Host Club|18|true|3|3|Evenly distributed roles
+4|Tenchi Muyo|12|false|3|3|Evenly distributed roles
+5|Slayers|13|false|2|2|Female-dominated roles
+6|Sword Art Online|10|false|1|1|Male-dominated roles
+7|Fushigi Yuugi|18|false|2|2|Female-dominated roles
+8|Attack on Titan|20|false|1|1|Male-dominated roles
+9|Fullmetal Alchemist|27|false|1|1|Male-dominated roles
+10|Fruits Basket|23|true|3|3|Evenly distributed roles
+11|InuYasha|56|false|2|2|Female-dominated roles
+12|Rurouni Kenshin|28|false|1|1|Male-dominated roles
+13|Trigun|14|false|1|1|Male-dominated roles
+14|Ranma 1/2|38|false|3|3|Evenly distributed roles
+15|Yu Yu Hakusho|19|false|1|1|Male-dominated roles
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT manga.name, leads.type FROM manga JOIN leads ON manga.lead_id = leads.id;
+
+Hana Kimi|Female-dominated roles
+Wallflower|Evenly distributed roles
+Ouran High Host Club|Evenly distributed roles
+Tenchi Muyo|Evenly distributed roles
+Slayers|Female-dominated roles
+Sword Art Online|Male-dominated roles
+Fushigi Yuugi|Female-dominated roles
+Attack on Titan|Male-dominated roles
+Fullmetal Alchemist|Male-dominated roles
+Fruits Basket|Evenly distributed roles
+InuYasha|Female-dominated roles
+Rurouni Kenshin|Male-dominated roles
+Trigun|Male-dominated roles
+Ranma 1/2|Evenly distributed roles
+Yu Yu Hakusho|Male-dominated roles
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM manga WHERE volumes=18;
+
+sqlite> SELECT * FROM manga;
+
+1|Hana Kimi|23|true|2
+2|Wallflower|36|true|3
+4|Tenchi Muyo|12|false|3
+5|Slayers|13|false|2
+6|Sword Art Online|10|false|1
+8|Attack on Titan|20|false|1
+9|Fullmetal Alchemist|27|false|1
+10|Fruits Basket|23|true|3
+11|InuYasha|56|false|2
+12|Rurouni Kenshin|28|false|1
+13|Trigun|14|false|1
+14|Ranma 1/2|38|false|3
+15|Yu Yu Hakusho|19|false|1
