@@ -58,26 +58,26 @@ loop do
 
 	when "remove"
 		puts "What number on the list would you like to remove?"
-		removal = gets.chomp.to_i
-		remove(list, removal)
+		id_number = gets.chomp.to_i
+		remove(list, id_number)
 		display(list)
 
 	when "update"
 		display(list)
 		puts "What number on the list would you like to update?"
-		update_num = gets.chomp.to_i
+		id_number = gets.chomp.to_i
 		loop do
 			puts "Would you like to update the *task* or *date*?"
 			update_option = gets.chomp.downcase
-			if column -- "task"
+			if update_option == "task"
 				puts "What is the new task?"
 				new_task = gets.chomp
-        		update_task(list, update_num, new_task)
+        		update_task(list, id_number, new_task)
         	break
-        	elsif column == "date"
+        	elsif update_option == "date"
         		puts "What's the new date? (MM/DD/YY)"
         		new_date = gets.chomp
-        		update_date(list, update_num, new_date)
+        		update_date(list, id_number, new_date)
         	break
         	else 
         	puts "Please type 'task' or 'date'."
