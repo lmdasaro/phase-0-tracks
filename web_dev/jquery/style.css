@@ -1,0 +1,36 @@
+h1 {
+	text-align: center;
+	margin-top: 15px;
+	color: blue;
+	border: 20px solid purple;
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 15px;
+	color: red;
+	border: 2px dashed blue;
+	margin: auto;
+}
+
+div {
+	padding: 20px 0px 20px 50px;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+button {
+  display: block;
+}
+
+textarea {
+	margin-top: 10px;
+	background-color: grey;
+	padding-right: 100px;
+}
+
+
