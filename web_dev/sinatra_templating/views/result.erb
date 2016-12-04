@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+</head>
+<body>
+	<p>Click <a href="students/home">here</a> to go home.</p>
+  <ul>
+    <% @results.each do |campus| %>
+      <li><%= student['name'] %>, <%= student['age'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
